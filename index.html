@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naprapaterna Sundbyberg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Naprapaterna Sundbyberg</div>
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Hem</a></li>
+                    <li><a href="#about">Om Oss</a></li>
+                    <li><a href="#services">Tjänster</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#map">Hitta Oss</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div> <!-- Överlagring för toning -->
+        <div class="container">
+            <h1>Välkommen till Naprapaterna Sundbyberg</h1>
+            <p>Din hälsa är vår prioritet. Boka en tid idag!</p>
+            <a href="#contact" class="cta-button">Kontakta Oss</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Om Oss</h2>
+            <p>Vi är en naprapatklinik i hjärtat av Sundbyberg, dedikerade till att hjälpa dig återfå och behålla en god hälsa. Vårt team av erfarna naprapater erbjuder personlig och professionell vård.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Våra Tjänster</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Naprapatbehandling</h3>
+                    <p>Behandling av muskel- och skelettbesvär.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Massage</h3>
+                    <p>Genom knådningar, glidningar och töjningar, löser massagen upp spänningar i hela kroppen och ger en behaglig och skön avslappning. Regelbunden massage håller borta smärta och trötthet i rygg, axlar och nacke. Du känner dig piggare, rörligare, mjukare och mer avslappnad. Vi erbjuder kvalitativ, klassisk massage där du väljer 23 minuter eller 55 minuters behandling. Vi som utför massagen är båda legitimerade naprapater med mångårig erfarenhet!</p>
+                </div>
+                <div class="service-item">
+                    <h3>Företagshälsovård</h3>
+                    <p>Har ni hög sjukfrånvaro på grund av rygg- och nackproblem? Vi kan hjälpa ert företag att behandla arbetsrelaterade besvär såsom musarm, värk och spänningar i nacke, axlar och rygg. I förebyggande syfte gör vi också individuella träningsprogram.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Priser</h3>
+                    <p>Naprapati 750 kr (30 min)</p>
+                    <p>Naprapati Lördag 800 kr (30 min)</p>
+                    <p>Klassisk massage 600 kr (25 min)</p>
+                    <p>Klassisk massage 650 kr (55 min)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontakta Oss</h2>
+            <form id="contact-form">
+                <label for="name">Namn:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Meddelande:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Skicka</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Kartsektion -->
+<section id="map" class="map-section">
+    <div class="container">
+        <h2>Hitta Oss</h2>
+        <p>Vi finns på Sturegatan 45, Sundbyberg. Välkommen!</p>
+        <!-- Google Maps Embed -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2032.834036434624!2d17.970389315556517!3d59.36178141612682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d9e6b6a6a6b%3A0x6b6a6a6b6a6a6a6b!2sSturegatan%2045%2C%20172%2031%20Sundbyberg!5e0!3m2!1ssv!2sse!4v1623680000000!5m2!1ssv!2sse"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Naprapaterna Sundbyberg. Alla rättigheter förbehållna.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

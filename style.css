@@ -1,0 +1,280 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #747475;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Logotyp och navbar i samma höjd */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigeringsmeny */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Menylänkar i samma höjd som logotypen */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61; /* Färg vid hover */
+}
+
+/* Hamburgermeny (dold på större skärmar) */
+.hamburger {
+    display: none; /* Dölj hamburgermeny på större skärmar */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    background: url('./pic/hero-foto.jpg') no-repeat center center/cover; /* Uppdaterad sökväg */
+}
+
+/* Överlagring för toning */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Svart toning med 50% opacitet */
+}
+
+/* Innehåll i hero-sektionen */
+.hero .container {
+    position: relative;
+    z-index: 1; /* Placera innehållet ovanpå överlagringen */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.hero .cta-button {
+    background: #ff6f61; /* Färg som passar temat */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background: #e65a50; /* Mörkare nyans vid hover */
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+.services {
+    background: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 250px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Visa hamburgermeny på mobila enheter */
+    }
+
+    .nav-links {
+        display: none; /* Dölj menylänkar på mobila enheter */
+        z-index: 1000; /* Högt värde för att säkerställa att menyn visas överallt */
+        flex-direction: column;
+        width: 100%;
+        background: #747475;
+        position: absolute;
+        top: 60px; /* Justera beroende på headerhöjd */
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Visa menylänkar när hamburgermenyn är aktiv */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* Services Section */
+    .service-item {
+        width: 100%;
+    }
