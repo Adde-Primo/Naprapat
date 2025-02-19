@@ -1,15 +1,42 @@
+
+const heroImages = [
+    './pic/hero-foto.jpg',
+    './pic/hero-foto1.jpg',
+    './pic/hero-foto2.jpg',
+];
+
+const heroSection = document.querySelector('.hero');
+let currentImageIndex = 0;
+
+function changeHeroImage() {
+    heroSection.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+    currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+}
+
+setInterval(changeHeroImage, 4000);
+changeHeroImage();
+
 // Simple form submission handling
 document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault();
+    event.preventDefault(); // Förhindra standardbeteendet för formulärsubmit
     alert('Tack för ditt meddelande! Vi återkommer så snart som möjligt.');
-    // Here you can add code to actually send the form data to a server
+    // Här kan du lägga till kod för att skicka formulärdata till en server (t.ex. med fetch eller XMLHttpRequest)
 });
 
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+if (hamburger && navLinks) {
+    // Öppna/stäng hamburgermeny
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
 
-console.log("JavaScript is working!");
+    // Stäng menyn när en länk klickas
+    const navItems = navLinks.querySelectorAll('a'); // Välj alla länkar i menyn
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active'); // Stäng menyn
+        });
+    });
+}

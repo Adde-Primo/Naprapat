@@ -2,8 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    padding: 30px 0 0; /* Justera padding-top beroende på navbarens höjd */
+    line-height: 1.5;
 }
 
 .container {
@@ -16,7 +16,11 @@ body {
 header {
     background: #747475;
     color: #fff;
-    padding: 10px 0;
+    padding: 12px 0;
+    position: fixed; /* Gör navbaren fast */
+    width: 100%; /* Täck hela bredden */
+    top: 0; /* Placera navbaren högst upp */
+    z-index: 1000; /* Säkerställ att navbaren är ovanpå andra element */
 }
 
 header .container {
@@ -46,7 +50,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
@@ -79,7 +83,20 @@ nav ul li a:hover {
     text-align: center;
     color: #fff;
     overflow: hidden;
-    background: url('./pic/hero-foto.jpg') no-repeat center center/cover; /* Uppdaterad sökväg */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Mjuk övergång */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0); /* Svart toning med 50% opacitet */
+    z-index: 0;
 }
 
 /* Överlagring för toning */
@@ -89,7 +106,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Svart toning med 50% opacitet */
+    background: rgba(0, 0, 0, 0.7); /* Svart toning med 50% opacitet */
 }
 
 /* Innehåll i hero-sektionen */
@@ -248,11 +265,11 @@ footer .social-media a:hover {
         display: none; /* Dölj menylänkar på mobila enheter */
         z-index: 1000; /* Högt värde för att säkerställa att menyn visas överallt */
         flex-direction: column;
-        width: 100%;
+        width: 25%;
         background: #747475;
         position: absolute;
         top: 60px; /* Justera beroende på headerhöjd */
-        left: 0;
+        right: 0px;
     }
 
     .nav-links.active {
