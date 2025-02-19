@@ -14,7 +14,7 @@ body {
 
 /* Header */
 header {
-    background: #747475;
+    background: #DEAA79;
     color: #fff;
     padding: 12px 0;
     position: fixed; /* Gör navbaren fast */
@@ -55,7 +55,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff6f61; /* Färg vid hover */
+    color: #659287; /* Färg vid hover */
 }
 
 /* Hamburgermeny (dold på större skärmar) */
@@ -68,7 +68,7 @@ nav ul li a:hover {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: #fff;
+    background: #659287;
     margin: 4px 0;
     transition: all 0.3s ease;
 }
@@ -95,7 +95,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.0); /* Svart toning med 50% opacitet */
+    background: rgba(0, 0, 0, 0.5); /* Svart toning med 50% opacitet */
     z-index: 0;
 }
 
@@ -106,7 +106,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Svart toning med 50% opacitet */
+    background: rgba(54, 54, 54, 0.7); /* Svart toning med 50% opacitet */
 }
 
 /* Innehåll i hero-sektionen */
@@ -126,7 +126,7 @@ nav ul li a:hover {
 }
 
 .hero .cta-button {
-    background: #ff6f61; /* Färg som passar temat */
+    background: #659287; /* Färg som passar temat */
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
@@ -136,7 +136,7 @@ nav ul li a:hover {
 }
 
 .hero .cta-button:hover {
-    background: #e65a50; /* Mörkare nyans vid hover */
+    background: #B1C29E; /* Mörkare nyans vid hover */
 }
 
 /* About Section */
@@ -158,7 +158,7 @@ nav ul li a:hover {
 
 /* Services Section */
 .services {
-    background: #f4f4f4;
+    background: #B1C29E;
     padding: 50px 0;
     text-align: center;
 }
@@ -225,7 +225,7 @@ nav ul li a:hover {
 }
 
 .contact form button {
-    background: #333;
+    background: #659287;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -234,12 +234,12 @@ nav ul li a:hover {
 }
 
 .contact form button:hover {
-    background: #555;
+    background: #579182;
 }
 
 /* Footer */
 footer {
-    background: #333;
+    background: #DEAA79;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -266,7 +266,7 @@ footer .social-media a:hover {
         z-index: 1000; /* Högt värde för att säkerställa att menyn visas överallt */
         flex-direction: column;
         width: 25%;
-        background: #747475;
+        background: #DEAA79;
         position: absolute;
         top: 60px; /* Justera beroende på headerhöjd */
         right: 0px;

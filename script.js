@@ -1,8 +1,8 @@
 
 const heroImages = [
     './pic/hero-foto.jpg',
-    './pic/hero-foto1.jpg',
-    './pic/hero-foto2.jpg',
+    './pic/hero-foto1.png',
+    './pic/hero-foto2.png',
 ];
 
 const heroSection = document.querySelector('.hero');
