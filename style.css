@@ -106,7 +106,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(54, 54, 54, 0.7); /* Svart toning med 50% opacitet */
+    background: rgba(191, 191, 191, 0.2); /* Svart toning med 50% opacitet */
 }
 
 /* Innehåll i hero-sektionen */
@@ -140,6 +140,13 @@ nav ul li a:hover {
 }
 
 /* About Section */
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
 .about {
     padding: 50px 0;
     text-align: center;
@@ -181,7 +188,7 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 30%;
-    min-width: 250px;
+    min-width: 50px;
 }
 
 .service-item h3 {
@@ -191,6 +198,20 @@ nav ul li a:hover {
 
 .service-item p {
     font-size: 16px;
+}
+
+.service-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 /* Contact Section */
@@ -292,6 +313,7 @@ footer .social-media a:hover {
     }
 
     /* Services Section */
-    .service-item {
-        width: 100%;
-    }
+        .service-item {
+            flex: 1 1 60%;
+            margin: 10px auto;
+        }
