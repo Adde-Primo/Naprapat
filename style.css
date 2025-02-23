@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 30px 0 0; /* Justera padding-top beroende på navbarens höjd */
+    padding: 30px 0 0;
     line-height: 1.5;
 }
 
@@ -17,21 +17,32 @@ header {
     background: #DEAA79;
     color: #fff;
     padding: 12px 0;
-    position: fixed; /* Gör navbaren fast */
-    width: 100%; /* Täck hela bredden */
-    top: 0; /* Placera navbaren högst upp */
-    z-index: 1000; /* Säkerställ att navbaren är ovanpå andra element */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Logotyp och navbar i samma höjd */
+    align-items: center; 
 }
 
 header .logo {
-    font-size: 24px;
+    font-size: 23px;
     font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: none;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
 }
 
 /* Navigeringsmeny */
@@ -40,7 +51,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: center; /* Menylänkar i samma höjd som logotypen */
+    align-items: center;
 }
 
 nav ul li {
@@ -55,12 +66,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #659287; /* Färg vid hover */
+    color: #659287;
 }
 
-/* Hamburgermeny (dold på större skärmar) */
+
 .hamburger {
-    display: none; /* Dölj hamburgermeny på större skärmar */
+    display: none;
     flex-direction: column;
     cursor: pointer;
 }
@@ -85,7 +96,7 @@ nav ul li a:hover {
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    transition: background-image 1s ease-in-out; /* Mjuk övergång */
+    transition: background-image 1s ease-in-out;
 }
 
 .hero::before {
@@ -95,7 +106,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Svart toning med 50% opacitet */
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 0;
 }
 
@@ -106,13 +117,13 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(191, 191, 191, 0.2); /* Svart toning med 50% opacitet */
+    background: rgba(191, 191, 191, 0.2);
 }
 
 /* Innehåll i hero-sektionen */
 .hero .container {
     position: relative;
-    z-index: 1; /* Placera innehållet ovanpå överlagringen */
+    z-index: 1; 
 }
 
 .hero h1 {
@@ -126,7 +137,7 @@ nav ul li a:hover {
 }
 
 .hero .cta-button {
-    background: #659287; /* Färg som passar temat */
+    background: #659287;
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
@@ -136,7 +147,7 @@ nav ul li a:hover {
 }
 
 .hero .cta-button:hover {
-    background: #B1C29E; /* Mörkare nyans vid hover */
+    background: #B1C29E;
 }
 
 /* About Section */
@@ -147,6 +158,7 @@ nav ul li a:hover {
     padding: 20px;
     text-align: center;
 }
+
 .about {
     padding: 50px 0;
     text-align: center;
@@ -182,13 +194,12 @@ nav ul li a:hover {
 }
 
 .service-item {
+    flex: 1;
     background: #fff;
     padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    min-width: 50px;
+    text-align: center;
 }
 
 .service-item h3 {
@@ -198,6 +209,7 @@ nav ul li a:hover {
 
 .service-item p {
     font-size: 16px;
+    margin: 10px 0;
 }
 
 .service-item img {
@@ -210,14 +222,33 @@ nav ul li a:hover {
 
 .image-container {
     display: flex;
+    margin: 50px;
     justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 20px; 
 }
 
+/* Contact Section */
 /* Contact Section */
 .contact {
     padding: 50px 0;
     text-align: center;
+    position: relative; 
+    background-image: url('./pic/background1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: 1; 
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: -1;
 }
 
 .contact h2 {
@@ -276,25 +307,29 @@ footer .social-media a:hover {
     text-decoration: underline;
 }
 
-/* Responsiv design */
 @media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+    }
+
+
     .hamburger {
-        display: flex; /* Visa hamburgermeny på mobila enheter */
+        display: flex;
     }
 
     .nav-links {
-        display: none; /* Dölj menylänkar på mobila enheter */
-        z-index: 1000; /* Högt värde för att säkerställa att menyn visas överallt */
+        display: none;
+        z-index: 1000;
         flex-direction: column;
         width: 25%;
         background: #DEAA79;
         position: absolute;
-        top: 60px; /* Justera beroende på headerhöjd */
+        top: 60px;
         right: 0px;
     }
 
     .nav-links.active {
-        display: flex; /* Visa menylänkar när hamburgermenyn är aktiv */
+        display: flex;
     }
 
     .nav-links li {
@@ -313,7 +348,8 @@ footer .social-media a:hover {
     }
 
     /* Services Section */
-        .service-item {
-            flex: 1 1 60%;
-            margin: 10px auto;
-        }
+    .service-item {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
