@@ -151,7 +151,6 @@ nav ul li a:hover {
 }
 
 /* About Section */
-
 .about .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -174,6 +173,7 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 0 auto;
 }
+ 
 
 /* Services Section */
 .services {
@@ -227,7 +227,6 @@ nav ul li a:hover {
     gap: 20px; 
 }
 
-/* Contact Section */
 /* Contact Section */
 .contact {
     padding: 50px 0;
@@ -321,10 +320,10 @@ footer .social-media a:hover {
         display: none;
         z-index: 1000;
         flex-direction: column;
-        width: 25%;
+        width: 30%;
         background: #DEAA79;
         position: absolute;
-        top: 60px;
+        top: 80px;
         right: 0px;
     }
 
@@ -336,7 +335,7 @@ footer .social-media a:hover {
         margin: 10px 0;
         text-align: center;
     }
-}
+    }
 
     /* Hero Section */
     .hero h1 {
@@ -352,4 +351,3 @@ footer .social-media a:hover {
         flex: 1 1 100%;
         margin-bottom: 20px;
     }
-
